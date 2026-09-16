@@ -52,12 +52,14 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     padding: 6rem 10% 2rem;
     color: var(--color-text-on-dark);
 }
 
 .home-content {
     max-width: 600px;
+    margin-left: auto;
 }
 
 .home-content h1 {
