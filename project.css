@@ -145,6 +145,21 @@ pre code, pre code {
     height: 100%;
 }
 
+.proj-local-video {
+    width: 50%;
+    max-width: 600px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto 20px;
+}
+
+.proj-local-video video {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 /* ***************************** */
 /* Responsive: tablet and mobile */
 /* ***************************** */
