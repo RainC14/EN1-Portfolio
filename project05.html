@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Project 5</title>
+    <title>TITLE GOES HERE</title>
     <link rel="stylesheet" href="./project.css">
 </head>
 <body>
+
+    <!-- This file is a STARTING POINT, not a real page. -->
+    <!-- To add a new activity or project: copy this file, rename it -->
+    <!-- (e.g. project04.html), fill in the content below, then add a -->
+    <!-- matching <article class="project-card"> link to index.html. -->
+    <!-- See AGENTS.md for the full step-by-step recipe. -->
 
     <!-- Header and Navigation Section -->
     <header class="header">
@@ -19,32 +25,38 @@
         <h1 class='proj-header'>Project Portfolio</h1>
 
         <div class="proj-img-container">
-            <img src="./images/header.jpg" alt="Project 5 hero image">
+            <img src="./images/header.jpg">
+            <!-- Replace with this page's own hero image, e.g. ./images/project04.png -->
         </div>
 
-        <h2 class='proj-header'>Project 5</h2>
+        <h2 class='proj-header'>Project 05: Spirograph Drawing Machine</h2>
 
         <div class="proj-desc">
             <p>
-                Add the project description here. This page follows the same structure as the earlier project pages, and the video section is set up so it can be replaced later with the final project demo.
-            </p>
+                In this proiject, I had to design a Spirograph with the SPIKE Prime kit. In the process of designing the machine I tried to break down the affects of different parts of the machine, 
+                such as the length of the arms, the speed of rotation, what happeneds if the marker is spinning twice as fast as the plate. From what I tested,
+                the closer the second arm is to the long arm attached to the gear, the smaller the curves are. I also noticed that doubling the speed of the arm, or reducing the speed of the platform would double the amount of curves.
+                one of my biggest issues with this project was trying to limit the range of the marker to only the post-it. In order to solve it, I just played around with different arm lengths until it worked.</p>
         </div>
 
-        <h3 class="proj-header">Project Video</h3>
-
-        <div class="proj-video-container proj-local-video">
-            <video controls poster="./images/header.jpg">
-                <!-- Replace this source with the final video file when it is ready. -->
-                <source src="./images/Videos/project05-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <!-- OPTIONAL BLOCK: photo gallery. Use when you have several   -->
+        <!-- work-in-progress or detail photos beyond the hero image     -->
+        <!-- above. Delete this whole <div> if you don't need it.        -->
+        <div class="proj-gallery">
+            <img src="./images/project05.png">
+            <img src="./images/Spirograph1.png">
         </div>
 
-        <h3 class="proj-header">Additional Information</h3>
-
-        <div class="proj-desc">
-            <p>Add additional project information here.</p>
+        <!-- OPTIONAL BLOCK: embedded video (e.g. a YouTube demo of your -->
+        <!-- project in action). Replace VIDEO_ID with the id from the   -->
+        <!-- video's share/embed URL. Delete this <div> if not needed.   -->
+        <div class="proj-video-container">
+            <iframe src="https://www.youtube.com/embed/4MDTGJC4AeA?si=4KxpB52m04zMAoBe" title="Project video" allowfullscreen></iframe>
         </div>
+
+        <!-- OPTIONAL BLOCK: a labeled code sample. Only include this on -->
+        <!-- pages that actually involve code (e.g. a robot's Arduino    -->
+        <!-- sketch). Delete this whole <div> for design/build projects. -->
 
     </div>
     <!-- End Project Information -->
