@@ -116,6 +116,23 @@ pre code, pre code {
     border-radius: var(--radius);
 }
 
+.worksheet {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+
+.worksheet img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
 /* Optional block: an embedded video (e.g. YouTube). The padding-top  */
 /* trick keeps a 16:9 shape at any screen width — do not set a fixed  */
 /* pixel height on the iframe itself.                                  */
