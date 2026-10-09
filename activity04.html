@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Activity 4: </title>
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+
+    <!-- This file is a STARTING POINT, not a real page. -->
+    <!-- To add a new activity or project: copy this file, rename it -->
+    <!-- (e.g. project04.html), fill in the content below, then add a -->
+    <!-- matching <article class="project-card"> link to index.html. -->
+    <!-- See AGENTS.md for the full step-by-step recipe. -->
+
+    <!-- Header and Navigation Section -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="./index.html" class="active">Home</a>
+        </nav>
+    </header>
+
+    <!-- Project Information -->
+    <div class="proj-container">
+
+        <h1 class='proj-header'>Project Portfolio</h1>
+
+        <div class="proj-img-container">
+            <img src="./images/activity04.png">
+            <!-- Replace with this page's own hero image, e.g. ./images/project04.png -->
+        </div>
+
+        <h2 class='proj-header'>Activity 4: Programming with Sensors</h2>
+
+        <div class="proj-desc">
+            <p>For this activity we had to start utilizing the inputs and outputs of the sensors
+                and hardware of the SPIKE Prime kit in order to prepare for Project 8. I wanted to
+                replicate the function of a gyroscopic electric screwdriver. So I utilized the IMU inside of 
+                the SPIKE Prime Hub to detect the roll of the hub and then used that to control the speed
+                and direction of the motor's rotation. I also used the LED on the hub as a visual indicator
+                of the direction of rotation.
+            </p>
+        </div>
+
+        <!-- OPTIONAL BLOCK: photo gallery. Use when you have several   -->
+        <!-- work-in-progress or detail photos beyond the hero image     -->
+        <!-- above. Delete this whole <div> if you don't need it.        -->
+
+        <!-- OPTIONAL BLOCK: embedded video (e.g. a YouTube demo of your -->
+        <!-- project in action). Replace VIDEO_ID with the id from the   -->
+        <!-- video's share/embed URL. Delete this <div> if not needed.   -->
+        <div class="proj-video-container">
+            <iframe src="https://www.youtube.com/embed/dxEW6uR_0fM" title="Project video" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- OPTIONAL BLOCK: a labeled code sample. Only include this on -->
+        <!-- pages that actually involve code (e.g. a robot's Arduino    -->
+        <!-- sketch). Delete this whole <div> for design/build projects. -->
+        <div class="proj-code">
+            <h3>Code:</h3>
+                <pre>
+                    <code>
+                        # Setup: motor on port A; use the hub's motion sensor for roll.
+from hub import port, motion_sensor, light
+import motor
+import runloop
+import color
+
+async def screwdriver_logic ():
+  roll 
+
+async def main():
+    # Keep checking the roll so the motor can respond to changes.
+    while True:
+        # Convert the roll reading from decidegrees to degrees.
+        roll = motion_sensor.tilt_angles()[2] / 10
+
+        # Stop the motor when the roll is between -10 and +10 degrees.
+        if (roll <= 25 and roll >= -25) or (roll >= 155 and roll >= -155):
+            motor.stop(port.A)
+        else:
+            # Run the motor when the roll is outside that range.
+            motor.run(port.A, int(roll * 10))
+            # update the LED green to show its going clockwise and red if its going counterclockwise
+          
+        if roll < -25:
+          light.color(light.POWER, color.GREEN)
+        elif roll > 25:
+          light.color(light.POWER, color.RED)
+        else:
+          light.color(light.POWER, color.YELLOW)
+          
+        # Pause briefly before checking again.
+        await runloop.sleep_ms(50)
+
+runloop.run(main())
+                </code>
+            </pre>
+        </div>
+
+
+    </div>
+    <!-- End Project Information -->
+
+</body>
+</html>
