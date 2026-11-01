@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TITLE GOES HERE</title>
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+
+    <!-- This file is a STARTING POINT, not a real page. -->
+    <!-- To add a new activity or project: copy this file, rename it -->
+    <!-- (e.g. project04.html), fill in the content below, then add a -->
+    <!-- matching <article class="project-card"> link to index.html. -->
+    <!-- See AGENTS.md for the full step-by-step recipe. -->
+
+    <!-- Header and Navigation Section -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="./index.html" class="active">Home</a>
+        </nav>
+    </header>
+
+    <!-- Project Information -->
+    <div class="proj-container">
+
+        <h1 class='proj-header'>Project Portfolio</h1>
+
+        <div class="proj-img-container">
+            <img src="./images/header.jpg">
+            <!-- Replace with this page's own hero image, e.g. ./images/project04.png -->
+        </div>
+
+        <h2 class='proj-header'>Project N: TITLE GOES HERE</h2>
+
+        <div class="proj-desc">
+            <p>Describe the activity or project here: the goal, your approach, and what you learned. Write this yourself — an AI assistant should never invent your results.</p>
+        </div>
+
+        <!-- OPTIONAL BLOCK: photo gallery. Use when you have several   -->
+        <!-- work-in-progress or detail photos beyond the hero image     -->
+        <!-- above. Delete this whole <div> if you don't need it.        -->
+        <div class="proj-gallery">
+            <img src="./images/activity01.png">
+            <img src="./images/activity02.png">
+            <img src="./images/activity03.png">
+        </div>
+
+        <!-- OPTIONAL BLOCK: embedded video (e.g. a YouTube demo of your -->
+        <!-- project in action). Replace VIDEO_ID with the id from the   -->
+        <!-- video's share/embed URL. Delete this <div> if not needed.   -->
+        <div class="proj-video-container">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Project video" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- OPTIONAL BLOCK: a labeled code sample. Only include this on -->
+        <!-- pages that actually involve code (e.g. a robot's Arduino    -->
+        <!-- sketch). Delete this whole <div> for design/build projects. -->
+        <div class="proj-code">
+            <h3>Code:</h3>
+                <pre>
+                    <code>
+                        import time
+import board
+import neopixel
+
+RED = (255, 0, 0)
+OFF = (0, 0, 0)
+
+right_eye = neopixel.NeoPixel(board.D8, 4, brightness=0.5, auto_write=False)
+left_eye = neopixel.NeoPixel(board.D7, 4, brightness=0.5, auto_write=False)
+
+def show_eyes(colors):
+    reversed_colors = colors[::-1]       # left eye gets the list backwards
+    for i in range(4):
+        right_eye[i] = colors[i]
+        left_eye[i] = reversed_colors[i]
+    right_eye.show()
+    left_eye.show()
+
+OPEN = [RED, RED, RED, RED]     # all 4 lit
+HALF = [OFF, OFF, RED, RED]     # bottom row only (squint)
+CLOSED = [OFF, OFF, OFF, OFF]   # all off
+
+def blink():
+    show_eyes(HALF)
+    time.sleep(0.08)
+    show_eyes(CLOSED)
+    time.sleep(0.12)
+    show_eyes(HALF)
+    time.sleep(0.08)
+    show_eyes(OPEN)
+
+show_eyes(OPEN)
+
+while True:
+    time.sleep(2.5)    # eyes stay open
+    blink()
+    time.sleep(0.4)
+    blink()            # quick double blink
+
+                </code>
+            </pre>
+        </div>
+
+
+    </div>
+    <!-- End Project Information -->
+
+</body>
+</html>
